@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <h1>Add Meeting Room</h1>
+    <form method="POST" class="meetingroom-form">{% csrf_token %}
+          {{ form|crispy }}
+        <br>
+        <button type="submit" class="save btn btn-default">Add</button>
+    </form>
+{% endblock %}
